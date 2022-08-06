@@ -18,7 +18,7 @@ build_ipxe () {
   #https://github.com/ipxe/ipxe/issues/620
   
   #artifacts
-  tar cfz /builds/ipxe.tar -C ~/ipxe/src/bin undionly.kpxe
+  tar cfz /builds/ipxe.tar -C ~/ipxe/ipxe-1.0.0+git-20190125.36a4c85/src/bin undionly.kpxe
 }
 
 echo "deb http://deb.debian.org/debian unstable main" > /etc/apt/sources.list

@@ -5,7 +5,7 @@ set -e o pipefail
 
 build_ipxe () {
 
-  #apt-get install git dpkg-dev uuid-dev uuid dpkg-source-gitarchive dh-exec xorriso isolinux syslinux-common syslinux-utils mtools binutils-dev liblzma-dev zlib1g-dev debhelper-compat -y
+  apt-get install git dpkg-dev uuid-dev uuid dpkg-source-gitarchive dh-exec xorriso isolinux syslinux-common syslinux-utils mtools binutils-dev liblzma-dev zlib1g-dev debhelper-compat -y
   mkdir ~/ipxe; cd ~/ipxe
   
   apt-get source ipxe=1.0.0+git-20190125.36a4c85 -y

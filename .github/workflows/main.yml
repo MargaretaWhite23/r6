@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: MargaretaWhite23/r6@main
+        uses: MargaretaWhite23/r6@master
         with:
           who-to-greet: 'Mona the Octocat'
       - name: ipxe

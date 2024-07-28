@@ -1,5 +1,5 @@
 #!ipxe
 
 dhcp
-chain http://192.168.0.50/dl/alpine_boot.ipxe
+chain http://192.168.0.49/dl/alpine_boot.ipxe
 #sanboot http://192.168.0.50/dl/alpine-standard-3.16.1-x86_64.iso
